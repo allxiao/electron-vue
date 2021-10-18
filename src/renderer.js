@@ -26,15 +26,12 @@
  * ```
  */
 
-import './index.css';
+import './index.css'
 
-import Vue from 'vue/dist/vue';
+import Vue from 'vue'
+import App from './App'
 
-const app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+new Vue({
+  render: h => h(App),
+  components: {App}
+}).$mount('#app')
