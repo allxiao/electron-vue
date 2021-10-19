@@ -1,3 +1,4 @@
+const path = require('path')
 const rules = require('./webpack.rules')
 const {VueLoaderPlugin} = require('vue-loader')
 
@@ -20,7 +21,8 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.ts', '.tsx', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, 'src')
     }
   }
 }
